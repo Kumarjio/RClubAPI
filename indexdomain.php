@@ -2,26 +2,22 @@
 
 include("vendor/autoloader.php");
 
-
 //replace Product in the below line with the class you want to test.
 
 
- use ResellerClub\Tests\DomainTest as RClubAPI;
-
-
+use ResellerClub\Tests\DomainTest as RClubAPI;
 
 //$apihost = "https://test.httpapi.com/api/";
 //$authid = "78536";
 //$apikey = "AbL5mxydZZih2AzMUsc80xEgfDmrdiRm"; // replace this with your token
 //$password = "mypwd"; // If you want to use your password to authenticate
-
 //Ajay's  Account API key details
 $apihost = "https://test.httpapi.com/api/";
 $authid = "501535";
 $apikey = "LIlLJGvlqBhFdSO7nSNatdE0lGozb0oy";
 
 
-$apicaller = new RClubAPI($apihost, $authid,$apikey);
+$apicaller = new RClubAPI($apihost, $authid, $apikey);
 
 
 
@@ -29,20 +25,11 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 ///// EXAMPLES BELOW - Uncomment the section to run
-
-
-
-
-
-
 //just call the function of the class you want to test.
 //$apicaller->move() ;
-
-
 //VPSLinux Plans=>
-
 //$apicaller->checkAvailability();
-//$apicaller->suggestDomains();
+$apicaller->suggestDomains();
 //$apicaller->validateTransferRequest();
 //$apicaller->renewsDomainRegistration();
 //$apicaller->DomainRegistrationOrders();
@@ -65,7 +52,7 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 //$apicaller->CTHLoginDetails();
 //$apicaller->modifyTelDomain();
 //$apicaller->resendMailOrder();
-    //$apicaller->releaseUKDomain();
+//$apicaller->releaseUKDomain();
 //$apicaller->cancelTransferOrder();
 //$apicaller->suspend();
 //$apicaller->Unsuspend();
@@ -83,36 +70,6 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 //$apicaller->checkAvailabilitySunRise();
 //$apicaller->fetchTMNotice();
 //$apicaller->fetchTLDSunRise();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //
 //include("vendor/autoloader.php");
 //
@@ -135,9 +92,9 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 /*
- //STARTING POSITION Functions Of DOMAIN
- 
- 
+  //STARTING POSITION Functions Of DOMAIN
+
+
   // Get Domain Availability
   $domain_availability = $apicaller->domain()->checkAvailability(array (
   'domain-name' => 'netfundaz',
@@ -279,7 +236,7 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
   'new-ip' => 'sdfsd.gg',
   ));
   print_r($modify_ip_addrs);
- 
+
 
 
 
@@ -312,134 +269,134 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 
-//Adds or Renews the Privacy Protection of domain
+  //Adds or Renews the Privacy Protection of domain
 
   $renew_domain = $apicaller->domain()->renewPrivacyDomain(array (
   'order-id' => '54761757',
   'invoice-option' => 'NoInvoice',
- 
+
   ));
   print_r($renew_domain);
 
 
 
-//Changes the Privacy Protection 
+  //Changes the Privacy Protection
 
   $modify_pp = $apicaller->domain()->modifyPrivacyProcDomain(array (
   'order-id' => '54761757',
   'protect-privacy' => 'true',
   'reason' => 'somereason',
- 
+
   ));
   print_r($modify_pp);
 
 
 
-// Modifies the Auth-Code of the specified Domain Registration Order 
+  // Modifies the Auth-Code of the specified Domain Registration Order
 
   $modify_ad = $apicaller->domain()->modifyAuthCodeProcDomain(array (
   'order-id' => '54761757',
   'auth-code' => 'a2@ ',
- 
+
   ));
   print_r($modify_ad);
 
 
 
-//Applies the Theft Protection Lock on the specified Order
+  //Applies the Theft Protection Lock on the specified Order
 
   $thept_lock = $apicaller->domain()->theftProtectionLock(array (
   'order-id' => '54761757',
- 
+
   ));
   print_r($thept_lock);
 
 
 
 
-//Disables the Theft Protection Lock on the specified order
+  //Disables the Theft Protection Lock on the specified order
 
   $dis_thept_lock = $apicaller->domain()->disableTheftProtectionLock(array (
   'order-id' => '54761757',
- 
+
   ));
   print_r($dis_thept_lock);
 
 
-// Gets the list of the Locks specified Domain Registration
+  // Gets the list of the Locks specified Domain Registration
 
   $list_lock_domain = $apicaller->domain()->listLockDomain(array (
   'order-id' => '54761757',
- 
+
   ));
   print_r($list_lock_domain);
 
 
 
-//  GGets the CTH Login Details for the specified 
+  //  GGets the CTH Login Details for the specified
 
   $cth_details = $apicaller->domain()->CTHLoginDetails(array (
   'order-id' => '54761757',
- 
+
   ));
   print_r($cth_details);
 
 
-//  Modifies the Whois Preference of the .TEL Domain Registration Order.
+  //  Modifies the Whois Preference of the .TEL Domain Registration Order.
 
   $modify_tel = $apicaller->domain()->modifyTelDomain(array (
   'order-id' => '54761757',
   'whois-type' => 'Legal'
- 
+
   ));
   print_r($modify_tel);
 
-  
+
   // Resends the Transfer Approval Mail for the specified Order.
 
   $rmail = $apicaller->domain()->resendMailOrder(array (
   'order-id' => '54761757',
- 
+
   ));
   print_r($rmail);
-  
- 
- 
- //Releases (transfers out) the specified .UK domain name to the specified Registrar..
+
+
+
+  //Releases (transfers out) the specified .UK domain name to the specified Registrar..
 
   $rUKDomain = $apicaller->domain()->releaseUKDomain(array (
   'order-id' => '54761757',
   'new-tag' => 'newregistrartag',
- 
-  ));
-  print_r($rUKDomain); 
-  
 
- 
-// Cancels the Transfer-In Order that is awaiting Admin approval.trar
+  ));
+  print_r($rUKDomain);
+
+
+
+  // Cancels the Transfer-In Order that is awaiting Admin approval.trar
 
   $c_order = $apicaller->domain()->cancelTransferOrder(array (
   'order-id' => '54761757',
- 
+
   ));
   print_r($c_order);
 
 
 
 
-// Suspend order
+  // Suspend order
 
   $c_order = $apicaller->domain()->suspend(array (
   'order-id' => '54792315',
   'reason' => 'no reason',
- 
+
   ));
   print_r($c_order);
 
 
 
 
-// UnSuspend order
+  // UnSuspend order
 
   $c_order = $apicaller->domain()->Unsuspend(array (
   'order-id' => '54792315',
@@ -449,7 +406,7 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 
-// Deletes the specified Domain Registration Order.
+  // Deletes the specified Domain Registration Order.
 
   $data = $apicaller->domain()->delete(array (
   'order-id' => '54792315',
@@ -459,7 +416,7 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 
-//Restores the specified Domain Registration Order.
+  //Restores the specified Domain Registration Order.
 
   $data = $apicaller->domain()->restore(array (
   'order-id' => '54792315',
@@ -468,10 +425,10 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
   print_r($data);
 
 
- 
 
 
-//Recheck zone configuration with .DE Registry of the expired .DE Domain Registration order.
+
+  //Recheck zone configuration with .DE Registry of the expired .DE Domain Registration order.
 
   $data = $apicaller->domain()->recheckNS(array (
   'order-id' => '54792315',
@@ -480,51 +437,51 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 
-// Allows associating/dissociating the Membership Token/ID provided by the .XXX Registry, 
+  // Allows associating/dissociating the Membership Token/ID provided by the .XXX Registry,
   //        to a Domain Registration Order.
   $data = $apicaller->domain()->DotXXXAssociationDetails(array (
   'order-id' => '54792315',
- 'association-id' => '54761757',
+  'association-id' => '54761757',
   ));
   print_r($data);
 
 
 
 
-// Adds a Delegation Signer (DS) Record for a Domain Registration Order.
+  // Adds a Delegation Signer (DS) Record for a Domain Registration Order.
   $data = $apicaller->domain()->addDSRecord(array (
   'order-id' => '54792315',
- 'attr-name1' => 'keytag',
- 'attr-value1' => '123',
- 'attr-name2' => 'algorithm',
- 'attr-value2' => '3',
- 'attr-name3' => 'digesttype',
- 'attr-value3' => '1',
- 'attr-name4' => 'digest',
- 'attr-value4' => '49FD46E6C4B45C55D4AC49FD46E6C4B45C55D111',
+  'attr-name1' => 'keytag',
+  'attr-value1' => '123',
+  'attr-name2' => 'algorithm',
+  'attr-value2' => '3',
+  'attr-name3' => 'digesttype',
+  'attr-value3' => '1',
+  'attr-name4' => 'digest',
+  'attr-value4' => '49FD46E6C4B45C55D4AC49FD46E6C4B45C55D111',
   ));
   print_r($data);
 
 
 
 
-//  delete a Delegation Signer (DS) Record for a Domain Registration Order.
+  //  delete a Delegation Signer (DS) Record for a Domain Registration Order.
   $data = $apicaller->domain()->deleteDSRecord(array (
- 'order-id' => '54792315',
- 'attr-name1' => 'keytag',
- 'attr-value1' => '123',
- 'attr-name2' => 'algorithm',
- 'attr-value2' => '3',
- 'attr-name3' => 'digesttype',
- 'attr-value3' => '1',
- 'attr-name4' => 'digest',
- 'attr-value4' => '49FD46E6C4B45C55D4AC49FD46E6C4B45C55D111',
+  'order-id' => '54792315',
+  'attr-name1' => 'keytag',
+  'attr-value1' => '123',
+  'attr-name2' => 'algorithm',
+  'attr-value2' => '3',
+  'attr-name3' => 'digesttype',
+  'attr-value3' => '1',
+  'attr-name4' => 'digest',
+  'attr-value4' => '49FD46E6C4B45C55D4AC49FD46E6C4B45C55D111',
   ));
   print_r($data);
 
 
 
-//  dResends the verification email to the Registrant Contact Email Address for the specified Domain Registration Order.
+  //  dResends the verification email to the Registrant Contact Email Address for the specified Domain Registration Order.
   $data = $apicaller->domain()->resendVerification(array (
   'order-id' => '54792315',
   ));
@@ -533,7 +490,7 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 
-//  RAdds a Pre-Registration Order for the specified Domain Name(s).
+  //  RAdds a Pre-Registration Order for the specified Domain Name(s).
   $data = $apicaller->domain()->addPreRegistrationOrder(array (
   'customerid' => '10693064',
   'domain' => 'mrinmoy.com',
@@ -541,7 +498,7 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
   print_r($data);
 
 
-// Deletes the Pre-Registration Order for the specified Domain Name(s).
+  // Deletes the Pre-Registration Order for the specified Domain Name(s).
   $data = $apicaller->domain()->deletePreRegistrationOrder(array (
   'customerid' => '10693064',
   'domain' => 'mrinmoy.com',
@@ -550,7 +507,7 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 
-//  Fetches the Pre-Registration Wishlist.
+  //  Fetches the Pre-Registration Wishlist.
   $data = $apicaller->domain()->fetchPreRegistrationWishlist(array (
   'no-of-records' => '10',
   'page-no' => '1',
@@ -560,14 +517,14 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 
-// Fetches the TLDs for the specified Category.
+  // Fetches the TLDs for the specified Category.
   $data = $apicaller->domain()->fetchPreRegistrationTLDs(array (
   'category' => 'services',
   ));
   print_r($data);
 
 
-  
+
   // Checks the availability of the specified Domain Name(s) in the Sunrise Phase.
   $data = $apicaller->domain()->checkAvailabilitySunRise(array (
   'domainname' => 'mrinmoy.com',
@@ -576,31 +533,31 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
   ));
   print_r($data);
 
- 
-// Fetches the Trademark Claim Data, based on the Trademark Claim Key.
+
+  // Fetches the Trademark Claim Data, based on the Trademark Claim Key.
   $data = $apicaller->domain()->fetchTMNotice(array (
   'lookup-key' => 'claim-key',//not getting claim-key
   ));
   print_r($data);
- 
- 
 
- // Fetches the list of TLDs currently in the Sunrise / Landrush Period
+
+
+  // Fetches the list of TLDs currently in the Sunrise / Landrush Period
   $data = $apicaller->domain()->fetchTLDSunRise(array (
   'phase' => 'sunrise',
- 
+
   ));
   print_r($data);
 
-//END OF DOMAIN FUNCTIONS
+  //END OF DOMAIN FUNCTIONS
 
 
 
 
-  */
+ */
 
 
-  /*
+/*
   //STARTING POSITION OF CONTACTS
 
 
@@ -623,115 +580,115 @@ $apicaller = new RClubAPI($apihost, $authid,$apikey);
 
 
 
-//Modifies the details of the specified Contact.
-$modify_contact = $apicaller->contact()->modifyContact(array(
-    'contact-id' => '36411094',
-    'name' => 'srikanta',
-    'company' => 'netfunda',
-    'email' => 'sjaj@hs.com',
-    'address-line-1' => 'ahsdh',
-    'address-line-2' => 'ahsdh',
-    'city' => 'hjah',
-    'country' => 'US',
-    'zipcode' => '343443',
-    'phone-cc' => '91',
-    'phone' => '98800417876',
-        ));
-print_r($modify_contact);
+  //Modifies the details of the specified Contact.
+  $modify_contact = $apicaller->contact()->modifyContact(array(
+  'contact-id' => '36411094',
+  'name' => 'srikanta',
+  'company' => 'netfunda',
+  'email' => 'sjaj@hs.com',
+  'address-line-1' => 'ahsdh',
+  'address-line-2' => 'ahsdh',
+  'city' => 'hjah',
+  'country' => 'US',
+  'zipcode' => '343443',
+  'phone-cc' => '91',
+  'phone' => '98800417876',
+  ));
+  print_r($modify_contact);
 
 
 
-	 //Gets the details for the specified Contact.
-$dataGettingContactDetails = $apicaller->contact()->gettingContactDetails(array(
-   'contact-id' => '36411094'
-        ));
-print_r($dataGettingContactDetails);
-
-
-  
-   //  Gets the Contact Details of the Contacts that match 
-   //  the Search criteria.
-     
-$srch_contact_details = $apicaller->contact()->searchingContactDetails(array(
-    'contact-id' => '36411094',
-    'customer-id' => '10701373',
-    'phone' => '98800417876',
-    'no-of-records' => '10',
-    'page-no' => '1'
-        ));
-print_r($srch_contact_details);
-
- 
-
-    //Gets the details of the Default Contacts for the Customer.
-     
-$default_contact_details = $apicaller->contact()->gettingDefaultContactDetails(array(
-    'customer-id' => '10701373',
-    'type' => 'Contact'
-        ));
-print_r($default_contact_details);
-
-
-//Associates mandatory extra details with the specified Contact to register 
-     
-$extra_details = $apicaller->contact()->addExtraDetailsToRegister(array(
-'contact-id' => '36411094',
-    'attr-name1' => 'sponsor1',
-    'attr-value1' => '0',
-    'product-key' => 'dotcoop',
-        ));
-print_r($extra_details);
-
-
- //Deletes the specified Contacts    
-$del_contact = $apicaller->contact()->deleteContact(array(
-    'contact-id' => '36411094'
-        ));
-print_r($del_contact);
-
-
-//Adds a Sponsor (Co-operative Reference) for a specified Customer  
-$dataCoopSponsor = $apicaller->contact()->addingCoopSponsor(array(
-    'name' => 'srikanta',
-    'company' => 'netfunda',
-    'email' => 'sjaj@hs.com',
-    'address-line-1' => 'ahsdh',
-    'city' => 'hjah',
-    'country' => 'US',
-    'zipcode' => '343443',
-    'phone-cc' => '91',
-    'phone' => '98800417876',
-    'customer-id' => '10701373',
-        ));
-print_r($dataCoopSponsor);
+  //Gets the details for the specified Contact.
+  $dataGettingContactDetails = $apicaller->contact()->gettingContactDetails(array(
+  'contact-id' => '36411094'
+  ));
+  print_r($dataGettingContactDetails);
 
 
 
-//Gets a list of system default .COOP Sponsors
-$dataForgettingCoopSponsor = $apicaller->contact()->gettingCoopSponsor(array(
-    'customer-id' => '10701373'
-        ));
-print_r($dataForgettingCoopSponsor);
+  //  Gets the Contact Details of the Contacts that match
+  //  the Search criteria.
+
+  $srch_contact_details = $apicaller->contact()->searchingContactDetails(array(
+  'contact-id' => '36411094',
+  'customer-id' => '10701373',
+  'phone' => '98800417876',
+  'no-of-records' => '10',
+  'page-no' => '1'
+  ));
+  print_r($srch_contact_details);
+
+
+
+  //Gets the details of the Default Contacts for the Customer.
+
+  $default_contact_details = $apicaller->contact()->gettingDefaultContactDetails(array(
+  'customer-id' => '10701373',
+  'type' => 'Contact'
+  ));
+  print_r($default_contact_details);
+
+
+  //Associates mandatory extra details with the specified Contact to register
+
+  $extra_details = $apicaller->contact()->addExtraDetailsToRegister(array(
+  'contact-id' => '36411094',
+  'attr-name1' => 'sponsor1',
+  'attr-value1' => '0',
+  'product-key' => 'dotcoop',
+  ));
+  print_r($extra_details);
+
+
+  //Deletes the specified Contacts
+  $del_contact = $apicaller->contact()->deleteContact(array(
+  'contact-id' => '36411094'
+  ));
+  print_r($del_contact);
+
+
+  //Adds a Sponsor (Co-operative Reference) for a specified Customer
+  $dataCoopSponsor = $apicaller->contact()->addingCoopSponsor(array(
+  'name' => 'srikanta',
+  'company' => 'netfunda',
+  'email' => 'sjaj@hs.com',
+  'address-line-1' => 'ahsdh',
+  'city' => 'hjah',
+  'country' => 'US',
+  'zipcode' => '343443',
+  'phone-cc' => '91',
+  'phone' => '98800417876',
+  'customer-id' => '10701373',
+  ));
+  print_r($dataCoopSponsor);
+
+
+
+  //Gets a list of system default .COOP Sponsors
+  $dataForgettingCoopSponsor = $apicaller->contact()->gettingCoopSponsor(array(
+  'customer-id' => '10701373'
+  ));
+  print_r($dataForgettingCoopSponsor);
 
 
 
 
-//Gets the Registrant Agreement mandated by the Canadian 
-$data = $apicaller->contact()->gettingCARegistrantAgreement(array());
-print_r($data);
+  //Gets the Registrant Agreement mandated by the Canadian
+  $data = $apicaller->contact()->gettingCARegistrantAgreement(array());
+  print_r($data);
 
 
 
-//Validates the Registrant Contact(s) eligibility criteria(s) provided
-$dataValidatingRegistrationContact = $apicaller->contact()->ValidatingRegistrationContact(array(
-    'contact-id' => '10701373',
-    'eligibility-criteria'=>'CED_ASIAN_COUNTRY',
-        ));
-print_r($dataValidatingRegistrationContact);
+  //Validates the Registrant Contact(s) eligibility criteria(s) provided
+  $dataValidatingRegistrationContact = $apicaller->contact()->ValidatingRegistrationContact(array(
+  'contact-id' => '10701373',
+  'eligibility-criteria'=>'CED_ASIAN_COUNTRY',
+  ));
+  print_r($dataValidatingRegistrationContact);
 
-//END OF ALL CONTACT FUNCTIONS
+  //END OF ALL CONTACT FUNCTIONS
 
-*/
+ */
 
 
 

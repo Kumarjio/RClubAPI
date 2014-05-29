@@ -37,11 +37,11 @@ class DomainTest {
 
     public function suggestDomains() {
         $data = $this->apicaller->domain()->suggestDomains(array(
-           'keyword' => 'AjayKumarGupta',
-  'tlds' => array('com','net'),
-  'no-of-results' => 100,
-  'hyphen-allowed' => true,
-  'add-related' => true,
+            'keyword' => 'AjayKumarGupta',
+            'tlds' => array('com', 'net'),
+            'no-of-results' => 100,
+            'hyphen-allowed' => true,
+            'add-related' => true,
         ));
         print_r($data);
     }
@@ -51,8 +51,8 @@ class DomainTest {
      */
 
     public function validateTransferRequest() {
-       $data = $this->apicaller->domain()->validateTransferRequest(array(
-              'domain-name' => 'netfunda.com',
+        $data = $this->apicaller->domain()->validateTransferRequest(array(
+            'domain-name' => 'netfunda.com',
         ));
         print_r($data);
     }
@@ -62,11 +62,11 @@ class DomainTest {
      */
 
     public function renewsDomainRegistration() {
-       $data = $this->apicaller->domain()->renewsDomainRegistration(array(
-         'order-id' => '54761757',
-  'years' => '1',
-  'exp-date' => '1279012036',
-  'invoice-option' => 'NoInvoice',
+        $data = $this->apicaller->domain()->renewsDomainRegistration(array(
+            'order-id' => '54761757',
+            'years' => '1',
+            'exp-date' => '1279012036',
+            'invoice-option' => 'NoInvoice',
         ));
         print_r($data);
     }
@@ -77,9 +77,9 @@ class DomainTest {
      */
 
     public function DomainRegistrationOrders() {
-       $data = $this->apicaller->domain()->DomainRegistrationOrders(array(
-         'no-of-records' => '10',
-  'page-no' => '1',
+        $data = $this->apicaller->domain()->DomainRegistrationOrders(array(
+            'no-of-records' => '10',
+            'page-no' => '1',
         ));
         print_r($data);
     }
@@ -89,8 +89,8 @@ class DomainTest {
      */
 
     public function getSeverNameOfCustomer() {
-       $data = $this->apicaller->domain()->getSeverNameOfCustomer(array(
-           'customer-id' => '10704470',
+        $data = $this->apicaller->domain()->getSeverNameOfCustomer(array(
+            'customer-id' => '10704470',
         ));
         print_r($data);
     }
@@ -100,9 +100,9 @@ class DomainTest {
      */
 
     public function orderIdAgainstDomain() {
-       $data = $this->apicaller->domain()->orderIdAgainstDomain(array(
-           'domain-name' => 'rtrtyhtyty.com',
-));
+        $data = $this->apicaller->domain()->orderIdAgainstDomain(array(
+            'domain-name' => 'rtrtyhtyty.com',
+        ));
         print_r($data);
     }
 
@@ -113,8 +113,8 @@ class DomainTest {
 
     public function detailOfDomainRegistration() {
         $data = $this->apicaller->domain()->detailOfDomainRegistration(array(
-             'order-id' => '53223912',
-  'options' => 'OrderDetails',
+            'order-id' => '53223912',
+            'options' => 'OrderDetails',
         ));
         print_r($data);
     }
@@ -125,9 +125,9 @@ class DomainTest {
      */
 
     public function detailOfSpecifiedDomain() {
-       $data = $this->apicaller->domain()->detailOfSpecifiedDomain(array(
+        $data = $this->apicaller->domain()->detailOfSpecifiedDomain(array(
             'domain-name' => 'rtrtyhtyty.com',
-  'options' => 'OrderDetails',
+            'options' => 'OrderDetails',
         ));
         print_r($data);
     }
@@ -139,8 +139,8 @@ class DomainTest {
 
     public function modifyServerName() {
         $data = $this->apicaller->domain()->modifyServerName(array(
-           'order-id' => '54761757',
-  'ns' => 'sdfsdf.hh',
+            'order-id' => '54761757',
+            'ns' => 'sdfsdf.hh',
         ));
         print_r($data);
     }
@@ -151,10 +151,10 @@ class DomainTest {
      */
 
     public function addChildNameServer() {
-       $data = $this->apicaller->domain()->addChildNameServer(array(
+        $data = $this->apicaller->domain()->addChildNameServer(array(
             'order-id' => '54761757',
-  'cns' => 'hgj.rtrtyhtyty.com',
-  'ip' => 'rtrtyhtyty.com',
+            'cns' => 'hgj.rtrtyhtyty.com',
+            'ip' => 'rtrtyhtyty.com',
         ));
         print_r($data);
     }
@@ -165,10 +165,10 @@ class DomainTest {
      */
 
     public function modifyHostNameChild() {
-       $data = $this->apicaller->domain()->modifyHostNameChild(array(
+        $data = $this->apicaller->domain()->modifyHostNameChild(array(
             'order-id' => '54761757',
-  'old-cns' => 'sdfsdf.jj',
-  'new-cns' => 'dsdf.jj',
+            'old-cns' => 'sdfsdf.jj',
+            'new-cns' => 'dsdf.jj',
         ));
         print_r($data);
     }
@@ -182,9 +182,9 @@ class DomainTest {
     public function modifyIPAddressChildServeName() {
         $data = $this->apicaller->domain()->modifyIPAddressChildServeName(array(
             'order-id' => '54761757',
-  'cns' => 'sdfsdf.jj',
-  'old-ip' => 'dfgfg.com',
-  'new-ip' => 'sdfsd.gg',
+            'cns' => 'sdfsdf.jj',
+            'old-ip' => 'dfgfg.com',
+            'new-ip' => 'sdfsd.gg',
         ));
         print_r($data);
     }
@@ -196,10 +196,10 @@ class DomainTest {
      */
 
     public function deleteIPAddressChildName() {
-      $data = $this->apicaller->domain()->deleteIPAddressChildName(array(
+        $data = $this->apicaller->domain()->deleteIPAddressChildName(array(
             'order-id' => '54761757',
-  'cns' => 'sdfsdf.jj',
-  'ip' => 'ajaukj.com',
+            'cns' => 'sdfsdf.jj',
+            'ip' => 'ajaukj.com',
         ));
         print_r($data);
     }
@@ -211,10 +211,10 @@ class DomainTest {
     public function modifySpecifiedDomainContacts() {
         $data = $this->apicaller->domain()->modifySpecifiedDomainContacts(array(
             'order-id' => '54761757',
-  'reg-contact-id' => '0',
-  'admin-contact-id' => '0',
-  'tech-contact-id' => '0',
-  'billing-contact-id' => '0',
+            'reg-contact-id' => '0',
+            'admin-contact-id' => '0',
+            'tech-contact-id' => '0',
+            'billing-contact-id' => '0',
         ));
         print_r($data);
     }
@@ -227,8 +227,7 @@ class DomainTest {
     public function renewPrivacyDomain() {
         $data = $this->apicaller->domain()->renewPrivacyDomain(array(
             'order-id' => '54761757',
-  'invoice-option' => 'NoInvoice',
-
+            'invoice-option' => 'NoInvoice',
         ));
         print_r($data);
     }
@@ -241,8 +240,8 @@ class DomainTest {
     public function modifyPrivacyProcDomain() {
         $data = $this->apicaller->domain()->modifyPrivacyProcDomain(array(
             'order-id' => '54761757',
-  'protect-privacy' => 'true',
-  'reason' => 'somereason',
+            'protect-privacy' => 'true',
+            'reason' => 'somereason',
         ));
         print_r($data);
     }
@@ -252,9 +251,9 @@ class DomainTest {
      */
 
     public function modifyAuthCodeProcDomain() {
-       $data = $this->apicaller->domain()->modifyAuthCodeProcDomain(array(
+        $data = $this->apicaller->domain()->modifyAuthCodeProcDomain(array(
             'order-id' => '54761757',
-  'auth-code' => 'a2@ ',
+            'auth-code' => 'a2@ ',
         ));
         print_r($data);
     }
@@ -264,8 +263,8 @@ class DomainTest {
      */
 
     public function theftProtectionLock() {
-       $data = $this->apicaller->domain()->theftProtectionLock(array(
-           'order-id' => '54761757',
+        $data = $this->apicaller->domain()->theftProtectionLock(array(
+            'order-id' => '54761757',
         ));
         print_r($data);
     }
@@ -275,7 +274,7 @@ class DomainTest {
      */
 
     public function disableTheftProtectionLock() {
-       $data = $this->apicaller->domain()->disableTheftProtectionLock(array(
+        $data = $this->apicaller->domain()->disableTheftProtectionLock(array(
             'order-id' => '54761757',
         ));
         print_r($data);
@@ -287,7 +286,7 @@ class DomainTest {
      */
 
     public function listLockDomain() {
-       $data = $this->apicaller->domain()->listLockDomain(array(
+        $data = $this->apicaller->domain()->listLockDomain(array(
             'order-id' => '54761757',
         ));
         print_r($data);
@@ -299,8 +298,8 @@ class DomainTest {
      */
 
     public function CTHLoginDetails() {
-       $data = $this->apicaller->domain()->CTHLoginDetails(array(
-           'order-id' => '54761757',
+        $data = $this->apicaller->domain()->CTHLoginDetails(array(
+            'order-id' => '54761757',
         ));
         print_r($data);
     }
@@ -310,9 +309,9 @@ class DomainTest {
      */
 
     public function modifyTelDomain() {
-       $data = $this->apicaller->domain()->modifyTelDomain(array(
+        $data = $this->apicaller->domain()->modifyTelDomain(array(
             'order-id' => '54761757',
-           'whois-type' => 'Legal'
+            'whois-type' => 'Legal'
         ));
         print_r($data);
     }
@@ -323,7 +322,7 @@ class DomainTest {
 
     public function resendMailOrder() {
         $data = $this->apicaller->domain()->resendMailOrder(array(
-             'order-id' => '54761757',
+            'order-id' => '54761757',
         ));
         print_r($data);
     }
@@ -333,9 +332,9 @@ class DomainTest {
      */
 
     public function releaseUKDomain() {
-       $data = $this->apicaller->domain()->releaseUKDomain(array(
-           'order-id' => '54761757',
-  'new-tag' => 'newregistrartag',
+        $data = $this->apicaller->domain()->releaseUKDomain(array(
+            'order-id' => '54761757',
+            'new-tag' => 'newregistrartag',
         ));
         print_r($data);
     }
@@ -345,8 +344,8 @@ class DomainTest {
      */
 
     public function cancelTransferOrder() {
-       $data = $this->apicaller->domain()->cancelTransferOrder(array(
-       'order-id' => '54761757',
+        $data = $this->apicaller->domain()->cancelTransferOrder(array(
+            'order-id' => '54761757',
         ));
         print_r($data);
     }
@@ -358,7 +357,7 @@ class DomainTest {
     public function suspend() {
         $data = $this->apicaller->domain()->suspend(array(
             'order-id' => '54792315',
-  'reason' => 'no reason',
+            'reason' => 'no reason',
         ));
         print_r($data);
     }
@@ -372,7 +371,7 @@ class DomainTest {
      */
     public function Unsuspend() {
         $data = $this->apicaller->domain()->Unsuspend(array(
-          'order-id' => '54792315',
+            'order-id' => '54792315',
         ));
         print_r($data);
     }
@@ -386,8 +385,8 @@ class DomainTest {
      * 34 Deletes the specified Domain Registration Order.
      */
     public function delete() {
-       $data = $this->apicaller->domain()->delete(array(
-           'order-id' => '54792315',
+        $data = $this->apicaller->domain()->delete(array(
+            'order-id' => '54792315',
         ));
         print_r($data);
     }
@@ -399,7 +398,7 @@ class DomainTest {
     public function restore() {
         $data = $this->apicaller->domain()->restore(array(
             'order-id' => '54792315',
-  'invoice-option' => 'KeepInvoice',
+            'invoice-option' => 'KeepInvoice',
         ));
         print_r($data);
     }
@@ -411,7 +410,7 @@ class DomainTest {
 
     public function recheckNS() {
         $data = $this->apicaller->domain()->recheckNS(array(
-         'order-id' => '54792315',
+            'order-id' => '54792315',
         ));
         print_r($data);
     }
@@ -424,8 +423,8 @@ class DomainTest {
 
     public function DotXXXAssociationDetails() {
         $data = $this->apicaller->domain()->DotXXXAssociationDetails(array(
-           'order-id' => '54792315',
- 'association-id' => '54761757',
+            'order-id' => '54792315',
+            'association-id' => '54761757',
         ));
         print_r($data);
     }
@@ -438,16 +437,16 @@ class DomainTest {
      */
 
     public function addDSRecord() {
-       $data = $this->apicaller->domain()->addDSRecord(array(
-        'order-id' => '54792315',
- 'attr-name1' => 'keytag',
- 'attr-value1' => '123',
- 'attr-name2' => 'algorithm',
- 'attr-value2' => '3',
- 'attr-name3' => 'digesttype',
- 'attr-value3' => '1',
- 'attr-name4' => 'digest',
- 'attr-value4' => '49FD46E6C4B45C55D4AC49FD46E6C4B45C55D111',
+        $data = $this->apicaller->domain()->addDSRecord(array(
+            'order-id' => '54792315',
+            'attr-name1' => 'keytag',
+            'attr-value1' => '123',
+            'attr-name2' => 'algorithm',
+            'attr-value2' => '3',
+            'attr-name3' => 'digesttype',
+            'attr-value3' => '1',
+            'attr-name4' => 'digest',
+            'attr-value4' => '49FD46E6C4B45C55D4AC49FD46E6C4B45C55D111',
         ));
         print_r($data);
     }
@@ -461,15 +460,15 @@ class DomainTest {
 
     public function deleteDSRecord() {
         $data = $this->apicaller->domain()->deleteDSRecord(array(
-        'order-id' => '54792315',
- 'attr-name1' => 'keytag',
- 'attr-value1' => '123',
- 'attr-name2' => 'algorithm',
- 'attr-value2' => '3',
- 'attr-name3' => 'digesttype',
- 'attr-value3' => '1',
- 'attr-name4' => 'digest',
- 'attr-value4' => '49FD46E6C4B45C55D4AC49FD46E6C4B45C55D111',
+            'order-id' => '54792315',
+            'attr-name1' => 'keytag',
+            'attr-value1' => '123',
+            'attr-name2' => 'algorithm',
+            'attr-value2' => '3',
+            'attr-name3' => 'digesttype',
+            'attr-value3' => '1',
+            'attr-name4' => 'digest',
+            'attr-value4' => '49FD46E6C4B45C55D4AC49FD46E6C4B45C55D111',
         ));
         print_r($data);
     }
@@ -483,7 +482,7 @@ class DomainTest {
      */
     public function resendVerification() {
         $data = $this->apicaller->domain()->resendVerification(array(
-             'order-id' => '54792315',
+            'order-id' => '54792315',
         ));
         print_r($data);
     }
@@ -495,8 +494,8 @@ class DomainTest {
 
     public function addPreRegistrationOrder() {
         $data = $this->apicaller->domain()->addPreRegistrationOrder(array(
-       'customerid' => '10693064',
-  'domain' => 'mrinmoy.com',
+            'customerid' => '10693064',
+            'domain' => 'mrinmoy.com',
         ));
         print_r($data);
     }
@@ -509,7 +508,7 @@ class DomainTest {
     public function deletePreRegistrationOrder() {
         $data = $this->apicaller->domain()->deletePreRegistrationOrder(array(
             'customerid' => '10693064',
-  'domain' => 'mrinmoy.com',
+            'domain' => 'mrinmoy.com',
         ));
         print_r($data);
     }
@@ -520,9 +519,9 @@ class DomainTest {
      */
 
     public function fetchPreRegistrationWishlist() {
-       $data = $this->apicaller->domain()->fetchPreRegistrationWishlist(array(
-           'no-of-records' => '10',
-  'page-no' => '1',
+        $data = $this->apicaller->domain()->fetchPreRegistrationWishlist(array(
+            'no-of-records' => '10',
+            'page-no' => '1',
         ));
         print_r($data);
     }
@@ -534,7 +533,7 @@ class DomainTest {
 
     public function fetchPreRegistrationTLDs() {
         $data = $this->apicaller->domain()->fetchPreRegistrationTLDs(array(
-          'category' => 'services',
+            'category' => 'services',
         ));
         print_r($data);
     }
@@ -545,10 +544,10 @@ class DomainTest {
      */
 
     public function checkAvailabilitySunRise() {
-       $data = $this->apicaller->domain()->checkAvailabilitySunRise(array(
-         'domainname' => 'mrinmoy.com',
-  'tld' => 'bike',
-  'smd' => 'fdgdf',
+        $data = $this->apicaller->domain()->checkAvailabilitySunRise(array(
+            'domainname' => 'mrinmoy.com',
+            'tld' => 'bike',
+            'smd' => 'fdgdf',
         ));
         print_r($data);
     }
@@ -559,8 +558,8 @@ class DomainTest {
      */
 
     public function fetchTMNotice() {
-       $data = $this->apicaller->domain()->fetchTMNotice(array(
-           'lookup-key' => 'claim-key',//not getting claim-key
+        $data = $this->apicaller->domain()->fetchTMNotice(array(
+            'lookup-key' => 'claim-key', //not getting claim-key
         ));
         print_r($data);
     }
@@ -572,7 +571,7 @@ class DomainTest {
 
     public function fetchTLDSunRise() {
         $data = $this->apicaller->domain()->fetchTLDSunRise(array(
-           'phase' => 'sunrise',
+            'phase' => 'sunrise',
         ));
         print_r($data);
     }
